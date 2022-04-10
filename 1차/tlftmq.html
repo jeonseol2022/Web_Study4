@@ -1,0 +1,28 @@
+<html>
+<head>
+	<title> Javascript study</title>
+	<style>
+		div{
+			font-size: 33px;
+			border:  2px solid black;
+		}
+	</style>
+</head>
+<body>
+	<p>TAgName</p>
+	<div id="mydiv" onmouseseover="change()">Id</div>
+	<span class="myspan">Class</span>
+
+<script>
+	var a=document.getElementsByTagName("p")[0].innerHTML;
+	var b=document.getElmentById("mydiv").innerHTML;
+	var c=document.getElementsByTagName("myspan")[0].innerHTML;
+	alert("p="+a+"\ndiv="+b+"\nspan="+c);
+	alert(1);
+
+	function change() {
+		document.getElmentById("mydiv").innerHTML="Hello Javascript!";
+	</script>
+</body>
+</html>
+	}

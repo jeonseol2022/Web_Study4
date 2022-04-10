@@ -1,0 +1,32 @@
+<html>
+<head>
+	<title>실습2</title>
+</head>
+<body>
+	<p align="center">
+	<input type="button" onclick='jstest()'value='클릭시 실행'/>
+</p>
+</body>
+</html>
+<script>
+	function jstest(){
+		var i=0,j=0;
+		var z,y;
+		var char='';
+		const str= prompt("숫자입력");
+		const arr=str.split(" ")
+		for (i = 0; i < arr.length; i++){
+			if (i==0)
+				z=arr[i];
+			else{
+				if (z<arr[i])
+				z=arr[i]; }
+		}
+		for(var j=0; j<i;j++)
+		char+=(j+1+"번째 입력 값:"+arr[j]+'\n');
+		alert(char);
+		document.write("입력한 수:",arr,'<br>')
+		document.write("가장큰수:",z)
+		
+	}
+</script>
