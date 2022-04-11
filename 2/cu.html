@@ -7,7 +7,7 @@
 	<input type="number" name="N1" value=""/>
 	<input type="text" name="input" value=""/>
 	<input type="number" name="N2" value=""/>
-	<input type="button" onclick='jstest();'value='계산'/>
+	<input type="button" onclick='jstest()'value='계산'/>
 
 <script>
 	jstest(){
@@ -16,13 +16,13 @@
 	var N2=document.getElementByname("N2").value;
 	
 		if (input=='+')
-			document.write(N1+N2)
+			document.write(Number(N1)+Number(N2))
 		if (input=='-')
-			document.write(N1-N2)
+			document.write(Number(N1)-Number(N2))
 		if (input=='/')
-			document.write(N1/N2)
+			document.write(Number(N1)/Number(N2))
 		if (input=='*')
-			document.write(N1*N2)
+			document.write(Number(N1)*Number(N2))
 		
 	}
 </script>
