@@ -1,22 +1,31 @@
 <html>
 <head>
+    <table align="center">
+        <tr>
+            <td height="250px">
+
     <script type="text/javascript">
         function c(){
             var currentDate=new Date();
             var cl=document.getElementById("cl");
-            var a=currentDate.getHours()+"h";
-            a+=currentDate.getMinutes() + "m";
+            var a=currentDate.getHours()+"h ";
+            a+=currentDate.getMinutes() + "m ";
         a+=currentDate.getSeconds() + "s";
 
             cl.innerText=a;
             setInterval(c,1000);
         }
     </script>
+</td>
+</tr>
+</table>
 </head>
-<body onload="c()" background-color="black">
-    <div id='cl' class="clock" style="font-size:100" align="center"  >
+
+<div class="background" style='background-size:1920px 1080px;'></div>
+<body background="wjs.jpeg" onload="c()">
+    <div id='cl' style="color: white; font-size:100; "  align="center"  ></div>
 
 
-    </div>
+
 </body>
 </html>

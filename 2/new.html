@@ -1,0 +1,28 @@
+<html>
+<head>
+   <title>계산기</title>
+   <h1 align="center">계산기</h1>
+</head>
+<body>
+<script>
+   var N1 = 0;
+   var N2 = 0;
+   function jstest(){
+   N1 = document.getElementsByName("N1")[0].value;
+   var input= document.getElementsByName("input")[0].value;
+   N2 = document.getElementsByName("N2")[0].value;
+   
+      if (input=='+')
+         document.write(Number(N1)+Number(N2))
+      if (input=='-')
+         document.write(Number(N1)-Number(N2))
+      if (input=='/')
+         document.write(Number(N1)/Number(N2))
+      if (input=='*')
+         document.write(Number(N1)*Number(N2))
+      
+   }
+</script>
+
+</body>
+</html>
