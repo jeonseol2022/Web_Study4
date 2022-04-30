@@ -6,29 +6,35 @@
 <script>
    var N1 = 0;
    var N2 = 0;
+   var an=0;
    function jstest(){
    N1 = document.getElementsByName("N1")[0].value;
    var input= document.getElementsByName("input")[0].value;
    N2 = document.getElementsByName("N2")[0].value;
    
       if (input=='+')
-         //document.write(Number(N1)+Number(N2))
-         alert(Number(N1)+Number(N2))
+         an=Number(N1)+Number(N2)
+         document.getElementById("data").innerHTML=an;
       if (input=='-')
-         alert(Number(N1)-Number(N2))
+         an=Number(N1)-Number(N2)
+         document.getElementById("data").innerHTML=an;
       if (input=='/')
-         alert(Number(N1)/Number(N2))
+         an=Number(N1)/Number(N2)
+         document.getElementById("data").innerHTML=an;
       if (input=='*')
-         alert(Number(N1)*Number(N2))
+         an=Number(N1)*Number(N2)
+         document.getElementById("data").innerHTML=an;
    }
 </script>
 <body>
    <p align="center">
       <form align="center" action="">
-         <input type="number" name="N1" >
+         <input type="number" name="N1" placeholder="0">
          <input type="text" name="input" placeholder="연산기호 입력하세요." style="background-color:lightgray;"/>
-         <input type="number" name="N2" value=""/>
+         <input type="number" name="N2" placeholder="0"value=""/>
          <input type="button" onclick='jstest()' value='계산'/>
+         <br><br><br>
+         연산 결과 <div id="data"></div>
       </form>
    </p>
 
