@@ -1,40 +1,61 @@
 <html>
 <head>
    <title>계산기</title>
+   <tr>
    <h1 align="center">계산기</h1>
+   <tr>
 </head>
 <script>
    var N1 = 0;
    var N2 = 0;
    var an=0;
-   function jstest(){
+   function p(){
    N1 = document.getElementsByName("N1")[0].value;
-   var input= document.getElementsByName("input")[0].value;
+   var plus= document.getElementsByName("plus")[0].value;
    N2 = document.getElementsByName("N2")[0].value;
    
-      if (input=='+')
          an=Number(N1)+Number(N2)
          document.getElementById("data").innerHTML=an;
-      if (input=='-')
+   }
+      function m(){
+   N1 = document.getElementsByName("N1")[0].value;
+   var ma= document.getElementsByName("ma")[0].value;
+   N2 = document.getElementsByName("N2")[0].value;
+   
          an=Number(N1)-Number(N2)
          document.getElementById("data").innerHTML=an;
-      if (input=='/')
-         an=Number(N1)/Number(N2)
-         document.getElementById("data").innerHTML=an;
-      if (input=='*')
+   }
+      function r(){
+   N1 = document.getElementsByName("N1")[0].value;
+   var rhq= document.getElementsByName("rhq")[0].value;
+   N2 = document.getElementsByName("N2")[0].value;
+   
          an=Number(N1)*Number(N2)
          document.getElementById("data").innerHTML=an;
    }
+      function s(){
+   N1 = document.getElementsByName("N1")[0].value;
+   var sk= document.getElementsByName("sk")[0].value;
+   N2 = document.getElementsByName("N2")[0].value;
+   
+         an=Number(N1)/Number(N2)
+         document.getElementById("data").innerHTML=an;
+   }
+
 </script>
 <body>
    <p align="center">
       <form align="center" action="">
          <input type="number" name="N1" placeholder="0">
-         <input type="text" name="input" placeholder="연산기호 입력하세요." style="background-color:lightgray;"/>
+         <input type="button" name="plus" onclick='p()' value='+'/>
+         <input type="button" name="ma" onclick='m()' value='-'/>
+         <input type="button" name="rhq" onclick='r()' value='x'/>
+         <input type="button" name="sk" onclick='s()' value='/'/>
          <input type="number" name="N2" placeholder="0"value=""/>
-         <input type="button" onclick='jstest()' value='계산'/>
          <br><br><br>
+            <table border='3' bordercolor='gray' width='700px' height='100px' style='border-radius: 30px'; ><td><center>
          연산 결과 <div id="data"></div>
+      </table></tr></td>
       </form>
    </p>
 
